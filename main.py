@@ -22,14 +22,14 @@ operations = {
 
 def calculator():
     print(art.logo)
-    first_number = int(input("What is the first number?\n"))
+    first_number = float(input("What is the first number?\n"))
     should_continue = True
     
     while should_continue:
         operator = input("Choose an operation +, -, *, /\n")
-        next_number = int(input("What is the next number?\n"))
+        next_number = float(input("What is the next number?\n"))
         result = operations[operator](first_number,next_number)
-        print(f"{first_number} {operator} {next_number} = {result}")
+        print(f"Results:\n{first_number} {operator} {next_number} = {result}")
         
         if input(f"If you would like to continue with {result} type 'y' or any other key to start over\n") == "y":
             first_number = result
